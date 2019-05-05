@@ -4,7 +4,8 @@ import { Columns, Column, Media, Title, MediaContent, Content } from "bloomer";
 import "bulma/css/bulma.css";
 import styled from "styled-components";
 
-// import { globalStyle } from "../utils/globalStyle";
+// import "../utils/prism-duotone-dark.css";
+import "../utils/global.css";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
@@ -81,7 +82,7 @@ class BlogIndex extends React.Component {
 
 const StyledColumn = styled(Column)`
   background-color: #fff;
-  // border-radius: 15px;
+  border-radius: 10px;
   margin-right: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
