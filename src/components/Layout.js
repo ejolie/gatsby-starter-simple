@@ -6,30 +6,49 @@ import Footer from "./Footer";
 import Nav from "./Nav";
 
 class Layout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActive: false
+    };
+  }
+
+  onClickNav = () => {
+    this.setState({
+      isActive: !this.state.isActive
+    });
+  };
+
   render() {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
 
     if (location.pathname === rootPath) {
-      header = <Header title={title} />;
+      header = (
+        <Header
+          onClickNav={this.onClickNav}
+          isActive={this.state.isActive}
+          title={title}
+        />
+      );
     } else {
-      header = <Nav title={title} />;
+      header = (
+        <Nav
+          onClickNav={this.onClickNav}
+          isActive={this.state.isActive}
+          title={title}
+        />
+      );
     }
     return (
       <div
         style={{
-          backgroundColor: "hsl(0, 0%, 96%)",
           minHeight: "100vh"
         }}
       >
         {header}
-        <Section
-          className="contents"
-          style={{
-            backgroundColor: "hsl(0, 0%, 96%)"
-          }}
-        >
+        <Section className="contents">
           <Container>{children}</Container>
         </Section>
         <Footer />

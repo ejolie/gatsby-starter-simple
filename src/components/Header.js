@@ -12,10 +12,10 @@ import {
 import Nav from "./Nav";
 
 const Header = (props) => {
-  const { title } = props;
+  const { title, onClickNav, isActive } = props;
   return (
     <Hero isColor="white" isSize="small">
-      <Nav title={title} />
+      <Nav title={title} onClickNav={onClickNav} isActive={isActive} />
       <HeroBody className="has-background-light">
         <Container>
           <Columns isCentered>

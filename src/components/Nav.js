@@ -5,12 +5,14 @@ import {
   Container,
   NavbarBrand,
   NavbarItem,
-  NavbarEnd
+  NavbarEnd,
+  NavbarBurger,
+  NavbarMenu
 } from "bloomer";
 import { Link } from "gatsby";
 
 const Nav = (props) => {
-  const { title } = props;
+  const { title, onClickNav, isActive } = props;
   return (
     <HeroHeader>
       <Navbar>
@@ -32,35 +34,49 @@ const Nav = (props) => {
                 </h2>
               </Link>
             </NavbarItem>
+            <NavbarBurger
+              isDisplay="mobile"
+              isActive={isActive}
+              onClick={onClickNav}
+            />
           </NavbarBrand>
-          <NavbarEnd>
-            <NavbarItem
-              className="has-text-grey"
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: 400,
-                fontSize: "0.8rem",
-                textTransform: "uppercase"
-              }}
-            >
-              <Link to="/" style={{ boxShadow: "none", color: "inherit" }}>
-                Home
-              </Link>
-            </NavbarItem>
-            <NavbarItem
-              className="has-text-grey"
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: 400,
-                fontSize: "0.8rem",
-                textTransform: "uppercase"
-              }}
-            >
-              <Link to="/about" style={{ boxShadow: "none", color: "inherit" }}>
-                About
-              </Link>
-            </NavbarItem>
-          </NavbarEnd>
+          <NavbarMenu
+            isDisplay={["desktop", "widescreen"]}
+            isActive={isActive}
+            onClick={onClickNav}
+          >
+            <NavbarEnd>
+              <NavbarItem
+                className="has-text-grey"
+                style={{
+                  fontFamily: "Nunito",
+                  fontWeight: 400,
+                  fontSize: "0.8rem",
+                  textTransform: "uppercase"
+                }}
+              >
+                <Link to="/" style={{ boxShadow: "none", color: "inherit" }}>
+                  Home
+                </Link>
+              </NavbarItem>
+              <NavbarItem
+                className="has-text-grey"
+                style={{
+                  fontFamily: "Nunito",
+                  fontWeight: 400,
+                  fontSize: "0.8rem",
+                  textTransform: "uppercase"
+                }}
+              >
+                <Link
+                  to="/about"
+                  style={{ boxShadow: "none", color: "inherit" }}
+                >
+                  About
+                </Link>
+              </NavbarItem>
+            </NavbarEnd>
+          </NavbarMenu>
         </Container>
       </Navbar>
     </HeroHeader>
