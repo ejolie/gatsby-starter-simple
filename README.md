@@ -8,3 +8,4 @@ A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gats
 - Disqus
 
 ## 🚀 Deploy
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e19e2fe8-c7ab-4e46-92b7-2106cb6e0097/deploy-status)](https://app.netlify.com/sites/gatsby-starter-simplefeed/deploys)
