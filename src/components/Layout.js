@@ -17,9 +17,19 @@ class Layout extends React.Component {
       header = <Nav title={title} />;
     }
     return (
-      <div style={{ backgroundColor: "hsl(0, 0%, 96%)" }}>
+      <div
+        style={{
+          backgroundColor: "hsl(0, 0%, 96%)",
+          minHeight: "100vh"
+        }}
+      >
         {header}
-        <Section className="contents">
+        <Section
+          className="contents"
+          style={{
+            backgroundColor: "hsl(0, 0%, 96%)"
+          }}
+        >
           <Container>{children}</Container>
         </Section>
         <Footer />

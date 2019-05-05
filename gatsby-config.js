@@ -55,7 +55,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Starter Simple Feed`,
-        short_name: `GatsbyJS`,
+        short_name: `Gatsby Simple`,
         start_url: `/`,
         background_color: `hsl(0, 0%, 96%)`,
         theme_color: `hsl(0, 0%, 96%)`,
