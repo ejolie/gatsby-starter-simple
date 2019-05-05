@@ -1,6 +1,6 @@
-# 📃 gatsby-sarter-simplefeed
+# gatsby-sarter-simplefeed
 
-Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) and inspired by [Facebook design blog](https://facebook.design/).
+A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) and inspired by [Facebook design blog](https://facebook.design/).
 
 ## ✨ Features
 
