@@ -1,3 +1,5 @@
+### 🚧 Work in progress 
+
 # gatsby-starter-simplefeed
 
 A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) and inspired by [Facebook design blog](https://facebook.design/).
