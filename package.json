@@ -1,0 +1,64 @@
+{
+  "name": "gatsby-starter-simplefeed",
+  "private": true,
+  "description": "A gatsby starter simple feed inspired by Facebook design blog",
+  "version": "0.1.0",
+  "author": "Eunjeong Park <ejisvip@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ejolie/gatsby-starter-simplefeed/issues"
+  },
+  "dependencies": {
+    "bloomer": "^0.6.5",
+    "bulma": "^0.7.4",
+    "disqus-react": "^1.0.5",
+    "gatsby": "^2.4.2",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-feed": "^2.2.0",
+    "gatsby-plugin-google-analytics": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.0",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.36",
+    "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-remark-copy-linked-files": "^2.0.12",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.2.9",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.19",
+    "noto-sans-kr": "^0.1.1",
+    "prismjs": "^1.16.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.2.0",
+    "typeface-noto-sans-kr": "^0.0.63",
+    "typeface-nunito": "^0.0.72",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  },
+  "homepage": "https://github.com/ejolie/gatsby-starter-simplefeed#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejolie/gatsby-starter-simplefeed.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  }
+}
