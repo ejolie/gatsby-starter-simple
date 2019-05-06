@@ -1,6 +1,6 @@
 ### 🚧 Work in progress
 
-# gatsby-starter-simplefeed
+# gatsby-starter-simple
 
 A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) and inspired by [Facebook design blog](https://facebook.design/).
 
@@ -17,7 +17,7 @@ A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gats
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e19e2fe8-c7ab-4e46-92b7-2106cb6e0097/deploy-status)](https://app.netlify.com/sites/gatsby-starter-simplefeed/deploys)
 
-See [Demo](https://gatsby-starter-simplefeed.netlify.com)
+See [Demo](https://gatsby-starter-simple.netlify.com)
 
 ### Screenshot
 
