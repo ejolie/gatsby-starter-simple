@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-simplefeed",
+  "name": "gatsby-starter-simple",
   "private": true,
-  "description": "A gatsby starter simple feed inspired by Facebook design blog",
+  "description": "A So Simple Gatsby Starter",
   "version": "0.1.0",
   "author": "Eunjeong Park <ejisvip@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ejolie/gatsby-starter-simplefeed/issues"
+    "url": "https://github.com/ejolie/gatsby-starter-simple/issues"
   },
   "dependencies": {
     "bloomer": "^0.6.5",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/ejolie/gatsby-starter-simplefeed#readme",
+  "homepage": "https://github.com/ejolie/gatsby-starter-simple#readme",
   "keywords": [
     "gatsby"
   ],
@@ -51,7 +51,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ejolie/gatsby-starter-simplefeed.git"
+    "url": "git+https://github.com/ejolie/gatsby-starter-simple.git"
   },
   "scripts": {
     "build": "gatsby build",

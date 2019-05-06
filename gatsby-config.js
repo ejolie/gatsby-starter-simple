@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `My Dev Blog`,
     author: `Eunjeong Park`,
-    description: `A gatsby starter simple feed`,
+    description: `A So Simple Gatsby Starter`,
     siteUrl: `https://gatsby-starter-simplefeed.netlify.com/`
   },
   plugins: [
@@ -54,13 +54,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Simple Feed`,
+        name: `Gatsby Starter Simple`,
         short_name: `Gatsby Simple`,
         start_url: `/`,
         background_color: `hsl(0, 0%, 96%)`,
         theme_color: `hsl(0, 0%, 96%)`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`
+        icon: `content/assets/icon.png`
       }
     },
     `gatsby-plugin-offline`,
