@@ -11,6 +11,7 @@ A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gats
 - [Bulma CSS framework](https://github.com/jgthms/bulma) with its [Bloomer react components](https://github.com/AlgusDark/bloomer)
 - Tagging
 - Disqus
+- Google Analytics
 
 &nbsp;
 
