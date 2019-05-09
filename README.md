@@ -12,6 +12,7 @@ A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gats
 - Tagging
 - Disqus
 - Google Analytics
+- Responsive design
 
 &nbsp;
 
