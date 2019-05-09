@@ -24,4 +24,9 @@ See [Demo](https://gatsby-starter-simple.netlify.com)
 
 ![Main page](./content/assets/main.png)
 
+![Post page](./content/assets/post.png)
+
+![Tags page](./content/assets/tags.png)
+
 &nbsp;
+
