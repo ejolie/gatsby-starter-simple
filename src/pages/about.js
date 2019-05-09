@@ -32,9 +32,10 @@ const About = (props) => {
               <Hand role="img" aria-label="Shaking hand">
                 👋🏻
               </Hand>{" "}
-              Hello, I'm Eunjeong. <br />
+              Hello, I'm Eunjeong.
+              <br />
             </Title>
-            <Subtitle isSize={3} style={{ marginTop: "1rem" }}>
+            <Subtitle isSize={4} style={{ marginTop: "1rem" }}>
               I'm Front-end Developer based in Seoul.{" "}
               <span role="img" aria-label="South Korea">
                 🇰🇷

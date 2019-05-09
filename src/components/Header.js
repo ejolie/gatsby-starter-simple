@@ -20,14 +20,7 @@ const Header = (props) => {
       <HeroBody className="has-background-light">
         <Container>
           <Columns isCentered>
-            <Column
-              isSize="3/4"
-              style={{
-                marginTop: "3rem",
-                marginRight: "2rem",
-                marginLeft: "2rem"
-              }}
-            >
+            <StyledColumn isSize="3/4">
               <Title
                 isSize={2}
                 hasTextColor="dark"
@@ -45,11 +38,11 @@ const Header = (props) => {
                 style={{ fontFamily: "Nunito, Noto Sans KR", fontWeight: 300 }}
               >
                 I think, write, and code.{" "}
-                <Heart role="img" aria-label="ㅗㄷㅁㄱㅅ">
+                <Heart role="img" aria-label="Heart">
                   💓
                 </Heart>
               </Subtitle>
-            </Column>
+            </StyledColumn>
           </Columns>
         </Container>
       </HeroBody>
@@ -70,8 +63,14 @@ const Heart = styled.span`
   display: inline-block;
   animation: ${jump} 0.4s ease infinite alternate;
   animation-play-state: paused;
+`;
 
-  :hover {
+const StyledColumn = styled(Column)`
+  margin-top: 3rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+
+  :hover ${Heart} {
     animation-play-state: running;
   }
 `;

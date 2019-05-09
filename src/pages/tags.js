@@ -37,7 +37,7 @@ const TagsPage = (props) => {
               </span>{" "}
               Tags
             </Title>
-            <ul>
+            <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
               {tags.map((tag) => (
                 <TagBox key={tag.fieldValue}>
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>

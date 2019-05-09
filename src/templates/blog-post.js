@@ -2,6 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { Section, Title, Content, Container } from "bloomer";
 import { DiscussionEmbed } from "disqus-react";
+import styled from "styled-components";
 
 import Bio from "../components/Bio";
 import Layout from "../components/Layout";
@@ -36,22 +37,13 @@ class BlogPostTemplate extends React.Component {
           />
           <Section style={{ paddingLeft: 0, paddingRight: 0, paddingTop: 0 }}>
             <Content isSize="medium">
-              <Title
-                style={{
-                  fontFamily: "Nunito, Noto Sans KR",
-                  fontSize: "2.5rem",
-                  fontWeight: 700,
-                  marginBottom: "1rem"
-                }}
-                hasTextColor="dark"
-              >
-                {post.frontmatter.title}
-              </Title>
+              <StyledTitle isSize={2}>{post.frontmatter.title}</StyledTitle>
               <p
                 style={{
                   fontSize: "0.9rem",
-                  marginTop: "0.3rem",
+                  marginTop: "1.5rem",
                   marginRight: "0.3rem",
+                  marginBottom: "0.3rem",
                   display: "block"
                 }}
                 className="has-text-grey"
@@ -107,6 +99,19 @@ class BlogPostTemplate extends React.Component {
     );
   }
 }
+
+const StyledTitle = styled(Title)`
+  font-family: "Nunito, Noto Sans KR", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 60%,
+      hsla(171, 94%, 61%, 0.5) 50% );
+  );
+  display: inline;
+`;
 
 export default BlogPostTemplate;
 

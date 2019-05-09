@@ -8,36 +8,33 @@ const TagsList = ({ tags }) => {
     return null;
   }
 
-  console.log(tags);
-
   return (
     <>
-      <TagBox>
+      <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
         <span style={{ fontSize: "1.2rem" }}>🔖</span>
         {tags.map((tag) => (
-          <TagItem key={tag}>
+          <TagBox key={tag}>
             <Link style={{ boxShadow: "none" }} to={`/tags/${kebabCase(tag)}/`}>
               {tag}
             </Link>
-          </TagItem>
+          </TagBox>
         ))}
-      </TagBox>
+      </ul>
     </>
   );
 };
 
 export default TagsList;
 
-const TagBox = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-  padding: 0;
-`;
+// const TagBox = styled.div`
+//   display: inline-block;
+//   padding: 0;
+// `;
 
-const TagItem = styled.span`
-  margin: 0 0.2rem 0 0.2rem;
-  padding: 0.2rem 0.5rem;
+const TagBox = styled.div`
+  display: inline-block;
+  margin: 0 0.2rem 0.1rem 0.2rem;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
   border: 1px solid #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);

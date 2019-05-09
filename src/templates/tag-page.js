@@ -39,7 +39,9 @@ const Tags = ({ pageContext, data, location }) => {
               {tagHeader}
               <TagHighlight>{tag}</TagHighlight>
             </Title>
-            <Section style={{ paddingTop: "1rem" }}>
+            <Section
+              style={{ paddingTop: "1rem", paddingLeft: 0, paddingRight: 0 }}
+            >
               <ul>
                 {edges.map(({ node }) => {
                   const { slug } = node.fields;
@@ -62,7 +64,7 @@ const Tags = ({ pageContext, data, location }) => {
                 })}
               </ul>
             </Section>
-            <Section>
+            <Section style={{ paddingLeft: 0, paddingRight: 0 }}>
               <Link to="/tags">← All tags</Link>
             </Section>
           </Column>
@@ -99,7 +101,7 @@ const TagHighlight = styled.span`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 60%,
-    hsla(171, 94%, 61%, 0.68) 50% );
+    hsla(171, 94%, 61%, 0.5) 50% );
   );
 `;
 

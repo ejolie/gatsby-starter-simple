@@ -49,7 +49,7 @@ class BlogIndex extends React.Component {
                         <Content>
                           <Title
                             style={{
-                              marginBottom: "0.5rem",
+                              marginBottom: "0.3rem",
                               color: "hsl(0, 0%, 21%)",
                               fontFamily: "Nunito, Noto Sans KR",
                               fontWeight: "400"
@@ -63,7 +63,8 @@ class BlogIndex extends React.Component {
                             className="has-text-grey"
                             style={{
                               fontFamily: "Nunito, Noto Sans KR",
-                              fontWeight: "400"
+                              fontWeight: "300",
+                              fontSize: "0.8rem"
                             }}
                           >
                             {node.frontmatter.date}
