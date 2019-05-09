@@ -42,17 +42,17 @@ class Layout extends React.Component {
       );
     }
     return (
-      <div
-        style={{
-          minHeight: "100vh"
-        }}
-      >
-        {header}
-        <Section className="contents">
-          <Container>{children}</Container>
-        </Section>
+      <>
+        <div
+          style={{
+            minHeight: "100vh"
+          }}
+        >
+          {header}
+          <Section className="contents">{children}</Section>
+        </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }

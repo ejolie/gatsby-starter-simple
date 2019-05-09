@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { kebabCase } from "lodash";
-import { Section, Title } from "bloomer";
+import { Container, Columns, Column, Title } from "bloomer";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
@@ -13,38 +13,42 @@ const TagsPage = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <Section
-        style={{
-          minHeight: "60vh",
-          paddingTop: "1.5rem",
-          marginLeft: "7.5rem",
-          marginRight: "7.5rem"
-        }}
-      >
-        <Title
-          isSize={2}
-          hasTextColor="dark"
-          style={{
-            fontFamily: "Nunito, Noto Sans KR",
-            fontWeight: 400,
-            marginBottom: "1.7rem"
-          }}
-        >
-          <span role="img" aria-label="Tag">
-            🔖
-          </span>{" "}
-          Tags
-        </Title>
-        <ul>
-          {tags.map((tag) => (
-            <TagBox key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </TagBox>
-          ))}
-        </ul>
-      </Section>
+      <Container>
+        <Columns isCentered>
+          <Column
+            isSize="3/4"
+            style={{
+              marginTop: "3rem",
+              marginRight: "2rem",
+              marginLeft: "2rem"
+            }}
+          >
+            <Title
+              isSize={2}
+              hasTextColor="dark"
+              style={{
+                fontFamily: "Nunito, Noto Sans KR",
+                fontWeight: 400,
+                marginBottom: "1.7rem"
+              }}
+            >
+              <span role="img" aria-label="Tag">
+                🔖
+              </span>{" "}
+              Tags
+            </Title>
+            <ul>
+              {tags.map((tag) => (
+                <TagBox key={tag.fieldValue}>
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    {tag.fieldValue} ({tag.totalCount})
+                  </Link>
+                </TagBox>
+              ))}
+            </ul>
+          </Column>
+        </Columns>
+      </Container>
     </Layout>
   );
 };

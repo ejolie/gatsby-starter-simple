@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
 
-    const disqusShortname = ""; // Write your disqus shortname
+    const disqusShortname = "ejolie"; // Write your disqus shortname
     const disqusConfig = {
       identifier: post.id,
       title: post.frontmatter.title
@@ -25,10 +25,9 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Container
           style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
             maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
+            marginRight: "auto",
+            marginLeft: "auto"
           }}
         >
           <SEO
@@ -36,42 +35,38 @@ class BlogPostTemplate extends React.Component {
             description={post.frontmatter.description || post.excerpt}
           />
           <Section style={{ paddingLeft: 0, paddingRight: 0, paddingTop: 0 }}>
-            <Title
-              style={{
-                fontFamily: "Nunito, Noto Sans KR",
-                fontSize: "2.5rem",
-                fontWeight: 700,
-                marginBottom: "1rem"
-              }}
-              hasTextColor="dark"
-            >
-              {post.frontmatter.title}
-            </Title>
-            <div style={{ display: "flex", alignItems: "start" }}>
+            <Content isSize="medium">
+              <Title
+                style={{
+                  fontFamily: "Nunito, Noto Sans KR",
+                  fontSize: "2.5rem",
+                  fontWeight: 700,
+                  marginBottom: "1rem"
+                }}
+                hasTextColor="dark"
+              >
+                {post.frontmatter.title}
+              </Title>
               <p
                 style={{
                   fontSize: "0.9rem",
                   marginTop: "0.3rem",
-                  marginRight: "0.3rem"
+                  marginRight: "0.3rem",
+                  display: "block"
                 }}
                 className="has-text-grey"
               >
                 {post.frontmatter.date}
               </p>
               <TagsList tags={post.frontmatter.tags} />
-            </div>
+            </Content>
           </Section>
-          <Content>
+          <Content style={{ marginBottom: rhythm(3) }}>
             <div
               style={{ fontFamily: "Nunito, Noto Sans KR" }}
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </Content>
-          <hr
-            style={{
-              marginBottom: rhythm(2)
-            }}
-          />
           <Bio />
           <ul
             style={{
@@ -80,7 +75,7 @@ class BlogPostTemplate extends React.Component {
               justifyContent: `space-between`,
               listStyle: `none`,
               padding: 0,
-              marginBottom: "3rem"
+              marginBottom: "2rem"
             }}
           >
             <li>

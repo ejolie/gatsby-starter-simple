@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { Section, Title } from "bloomer";
+import { Container, Section, Columns, Column, Title } from "bloomer";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
@@ -17,53 +17,57 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Section
-        style={{
-          minHeight: "60vh",
-          paddingTop: "1.5rem",
-          marginLeft: "7.5rem",
-          marginRight: "7.5rem"
-        }}
-      >
-        <Title
-          isSize={3}
-          hasTextColor="dark"
-          style={{
-            fontFamily: "Nunito, Noto Sans KR",
-            fontWeight: 400,
-            marginBottom: "1.7rem"
-          }}
-        >
-          {tagHeader}
-          <TagHighlight>{tag}</TagHighlight>
-        </Title>
-        <Section style={{ paddingTop: "1rem" }}>
-          <ul>
-            {edges.map(({ node }) => {
-              const { slug } = node.fields;
-              const { title, date } = node.frontmatter;
-              return (
-                <li key={slug}>
-                  <Link
-                    style={{
-                      fontSize: "1.3rem",
-                      marginRight: "0.5rem",
-                      lineHeight: "1.7"
-                    }}
-                    to={slug}
-                  >
-                    {title}
-                  </Link>
-                  <small>{date}</small>
-                </li>
-              );
-            })}
-          </ul>
-        </Section>
-        <Section>
-          <Link to="/tags">← All tags</Link>
-        </Section>
-      </Section>
+      <Container>
+        <Columns isCentered>
+          <Column
+            isSize="3/4"
+            style={{
+              marginTop: "3rem",
+              marginRight: "2rem",
+              marginLeft: "2rem"
+            }}
+          >
+            <Title
+              isSize={3}
+              hasTextColor="dark"
+              style={{
+                fontFamily: "Nunito, Noto Sans KR",
+                fontWeight: 400,
+                marginBottom: "1.7rem"
+              }}
+            >
+              {tagHeader}
+              <TagHighlight>{tag}</TagHighlight>
+            </Title>
+            <Section style={{ paddingTop: "1rem" }}>
+              <ul>
+                {edges.map(({ node }) => {
+                  const { slug } = node.fields;
+                  const { title, date } = node.frontmatter;
+                  return (
+                    <li key={slug}>
+                      <Link
+                        style={{
+                          fontSize: "1.3rem",
+                          marginRight: "0.5rem",
+                          lineHeight: "1.7"
+                        }}
+                        to={slug}
+                      >
+                        {title}
+                      </Link>
+                      <small>{date}</small>
+                    </li>
+                  );
+                })}
+              </ul>
+            </Section>
+            <Section>
+              <Link to="/tags">← All tags</Link>
+            </Section>
+          </Column>
+        </Columns>
+      </Container>
     </Layout>
   );
 };
@@ -92,19 +96,11 @@ Tags.propTypes = {
 };
 
 const TagHighlight = styled.span`
-  position: relative;
-  text-decoration: none;
-
-  :before {
-    content: "";
-    position: absolute;
-    left: -5px;
-    bottom: -1px;
-    width: 110%;
-    height: 8px;
-    background-color: hsl(171, 100%, 41%);
-    z-index: -1;
-  }
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 60%,
+    hsla(171, 94%, 61%, 0.68) 50% );
+  );
 `;
 
 export default Tags;

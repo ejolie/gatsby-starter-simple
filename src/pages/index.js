@@ -1,6 +1,14 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Columns, Column, Media, Title, MediaContent, Content } from "bloomer";
+import {
+  Container,
+  Columns,
+  Column,
+  Media,
+  Title,
+  MediaContent,
+  Content
+} from "bloomer";
 import "bulma/css/bulma.css";
 import styled from "styled-components";
 
@@ -21,64 +29,67 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <Columns isCentered key={node.fields.slug}>
-              <StyledColumn isSize="3/4">
-                <Media style={{ padding: "1.5rem" }}>
-                  <MediaContent>
-                    <Link
-                      style={{
-                        boxShadow: "none",
-                        ":hover": {
-                          color: "hsl(0, 0%, 21%)"
-                        }
-                      }}
-                      to={node.fields.slug}
-                    >
-                      <Content>
-                        <Title
-                          style={{
-                            marginBottom: "0.5rem",
-                            color: "hsl(0, 0%, 21%)",
-                            fontFamily: "Nunito, Noto Sans KR",
-                            fontWeight: "400"
-                          }}
-                          isSize={4}
-                          id="post-title"
-                        >
-                          {title}
-                        </Title>
-                        <small
-                          className="has-text-grey"
-                          style={{
-                            fontFamily: "Nunito, Noto Sans KR",
-                            fontWeight: "400"
-                          }}
-                        >
-                          {node.frontmatter.date}
-                        </small>
-                        <p
-                          hasTextColor="dark"
-                          style={{
-                            fontFamily: "Nunito, Noto Sans KR",
-                            fontWeight: "400",
-                            fontSize: "1.2rem",
-                            marginTop: "0.7rem"
-                          }}
-                          dangerouslySetInnerHTML={{
-                            __html: node.frontmatter.description || node.excerpt
-                          }}
-                        />
-                      </Content>
-                    </Link>
-                  </MediaContent>
-                </Media>
-              </StyledColumn>
-            </Columns>
-          );
-        })}
+        <Container>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug;
+            return (
+              <Columns isCentered key={node.fields.slug}>
+                <StyledColumn isSize="3/4">
+                  <Media style={{ padding: "1.5rem" }}>
+                    <MediaContent>
+                      <Link
+                        style={{
+                          boxShadow: "none",
+                          ":hover": {
+                            color: "hsl(0, 0%, 21%)"
+                          }
+                        }}
+                        to={node.fields.slug}
+                      >
+                        <Content>
+                          <Title
+                            style={{
+                              marginBottom: "0.5rem",
+                              color: "hsl(0, 0%, 21%)",
+                              fontFamily: "Nunito, Noto Sans KR",
+                              fontWeight: "400"
+                            }}
+                            isSize={4}
+                            id="post-title"
+                          >
+                            {title}
+                          </Title>
+                          <small
+                            className="has-text-grey"
+                            style={{
+                              fontFamily: "Nunito, Noto Sans KR",
+                              fontWeight: "400"
+                            }}
+                          >
+                            {node.frontmatter.date}
+                          </small>
+                          <p
+                            hasTextColor="dark"
+                            style={{
+                              fontFamily: "Nunito, Noto Sans KR",
+                              fontWeight: "400",
+                              fontSize: "1.2rem",
+                              marginTop: "0.7rem"
+                            }}
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                node.frontmatter.description || node.excerpt
+                            }}
+                          />
+                        </Content>
+                      </Link>
+                    </MediaContent>
+                  </Media>
+                </StyledColumn>
+              </Columns>
+            );
+          })}
+        </Container>
       </Layout>
     );
   }

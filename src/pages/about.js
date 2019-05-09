@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Section, Subtitle } from "bloomer";
+import { Container, Column, Columns, Title, Subtitle } from "bloomer";
 import styled, { keyframes } from "styled-components";
 
 import Layout from "../components/Layout";
@@ -10,39 +10,43 @@ const About = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <Section
-        style={{
-          minHeight: "60vh",
-          paddingTop: "1.5rem",
-          marginLeft: "7.5rem",
-          marginRight: "7.5rem"
-        }}
-      >
-        <Title
-          isSize={3}
-          hasTextColor="dark"
-          style={{
-            fontFamily: "Nunito, Noto Sans KR",
-            fontWeight: 400,
-            marginBottom: "1.7rem"
-          }}
-        >
-          <Hand role="img" aria-label="Shaking hand">
-            👋🏻
-          </Hand>{" "}
-          Hello, I'm Eunjeong. <br />
-        </Title>
-        <Subtitle isSize={3} style={{ marginTop: "1rem" }}>
-          I'm Front-end Developer based in Seoul.{" "}
-          <span role="img" aria-label="South Korea">
-            🇰🇷
-          </span>
-          <br /> I love to make things with JavaScript.
-        </Subtitle>
-        <span>
-          <a href="https://github.com/ejolie/">Github</a>
-        </span>
-      </Section>
+      <Container>
+        <Columns isCentered>
+          <Column
+            isSize="3/4"
+            style={{
+              marginTop: "3rem",
+              marginRight: "2rem",
+              marginLeft: "2rem"
+            }}
+          >
+            <Title
+              isSize={3}
+              hasTextColor="dark"
+              style={{
+                fontFamily: "Nunito, Noto Sans KR",
+                fontWeight: 400,
+                marginBottom: "1.7rem"
+              }}
+            >
+              <Hand role="img" aria-label="Shaking hand">
+                👋🏻
+              </Hand>{" "}
+              Hello, I'm Eunjeong. <br />
+            </Title>
+            <Subtitle isSize={3} style={{ marginTop: "1rem" }}>
+              I'm Front-end Developer based in Seoul.{" "}
+              <span role="img" aria-label="South Korea">
+                🇰🇷
+              </span>
+              <br /> I love to make things with JavaScript.
+            </Subtitle>
+            <span>
+              <a href="https://github.com/ejolie/">Github</a>
+            </span>
+          </Column>
+        </Columns>
+      </Container>
     </Layout>
   );
 };

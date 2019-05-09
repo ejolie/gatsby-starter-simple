@@ -31,13 +31,13 @@ export default TagsList;
 const TagBox = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
+  margin-top: 0.5rem;
   padding: 0;
 `;
 
 const TagItem = styled.span`
   margin: 0 0.2rem 0 0.2rem;
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid #fff;
   border-radius: 10px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
