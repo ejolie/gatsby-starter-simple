@@ -3,6 +3,14 @@ body {
   font-family: "Nunito, Noto Sans KR", sans-serif;
 }
 
+a {
+  color: hsl(0, 0%, 29%);
+}
+
+a:hover {
+  color: hsl(171, 100%, 41%);
+}
+
 .tag:not(body) {
   background: none;
 }

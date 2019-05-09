@@ -26,7 +26,7 @@ const Nav = (props) => {
                 <h2
                   style={{
                     fontFamily: "Nunito",
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: "1rem"
                   }}
                 >
@@ -73,6 +73,22 @@ const Nav = (props) => {
                   style={{ boxShadow: "none", color: "inherit" }}
                 >
                   About
+                </Link>
+              </NavbarItem>
+              <NavbarItem
+                className="has-text-grey"
+                style={{
+                  fontFamily: "Nunito",
+                  fontWeight: 400,
+                  fontSize: "0.8rem",
+                  textTransform: "uppercase"
+                }}
+              >
+                <Link
+                  to="/tags"
+                  style={{ boxShadow: "none", color: "inherit" }}
+                >
+                  Tags
                 </Link>
               </NavbarItem>
             </NavbarEnd>

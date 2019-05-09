@@ -3,14 +3,6 @@ import Wordpress2016 from "typography-theme-wordpress-2016";
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
-    a: {
-      color: "var(--textLink)"
-    },
-
-    hr: {
-      background: "var(--hr)"
-    },
-
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
       textDecoration: `none`
@@ -53,13 +45,15 @@ Wordpress2016.overrideThemeStyles = () => {
     "h1, h2, h3": {
       fontWeight: 700,
       lineHeight: 1.2,
-      fontFamily: "Nunito, Noto Sans KR"
+      fontFamily: "Nunito, Noto Sans KR",
+      color: "hsl(0, 0%, 21%)"
     },
 
     "h4, h5, h6": {
       fontWeight: 700,
       lineHeight: 1.2,
-      fontFamily: "Nunito, Noto Sans KR"
+      fontFamily: "Nunito, Noto Sans KR",
+      color: "hsl(0, 0%, 21%)"
     }
   };
 };

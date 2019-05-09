@@ -56,7 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
     let tags = [];
     _.each(posts, (edge) => {
       if (_.get(edge, "node.frontmatter.tags")) {
-        tags = tags.push(edge.node.frontmatter.tags);
+        tags = tags.concat(edge.node.frontmatter.tags);
       }
     });
     tags = _.uniq(tags);

@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
           return (
             <Columns isCentered key={node.fields.slug}>
               <StyledColumn isSize="3/4">
-                <Media style={{ padding: "1rem" }}>
+                <Media style={{ padding: "1.5rem" }}>
                   <MediaContent>
                     <Content>
                       <Title
@@ -62,7 +62,7 @@ class BlogIndex extends React.Component {
                           fontFamily: "Nunito, Noto Sans KR",
                           fontWeight: "400",
                           fontSize: "1.2rem",
-                          marginTop: "0.5rem"
+                          marginTop: "0.7rem"
                         }}
                         dangerouslySetInnerHTML={{
                           __html: node.frontmatter.description || node.excerpt
@@ -118,6 +118,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

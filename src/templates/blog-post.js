@@ -6,7 +6,7 @@ import { DiscussionEmbed } from "disqus-react";
 import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-// import TagList from "../TagList";
+import TagsList from "../components/TagsList";
 import { rhythm, scale } from "../utils/typography";
 
 class BlogPostTemplate extends React.Component {
@@ -35,29 +35,31 @@ class BlogPostTemplate extends React.Component {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <Section style={{ paddingLeft: 0, paddingRight: 0 }}>
+          <Section style={{ paddingLeft: 0, paddingRight: 0, paddingTop: 0 }}>
             <Title
               style={{
                 fontFamily: "Nunito, Noto Sans KR",
                 fontSize: "2.5rem",
-                fontWeight: 700
+                fontWeight: 700,
+                marginBottom: "1rem"
               }}
               hasTextColor="dark"
             >
               {post.frontmatter.title}
             </Title>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-                marginTop: rhythm(-0.5)
-              }}
-              className="has-text-grey"
-            >
-              {post.frontmatter.date}
-            </p>
-            {/* <TagList tags={post.frontmatter.tags} /> */}
+            <div style={{ display: "flex", alignItems: "start" }}>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  marginTop: "0.3rem",
+                  marginRight: "0.3rem"
+                }}
+                className="has-text-grey"
+              >
+                {post.frontmatter.date}
+              </p>
+              <TagsList tags={post.frontmatter.tags} />
+            </div>
           </Section>
           <Content>
             <div
@@ -67,7 +69,7 @@ class BlogPostTemplate extends React.Component {
           </Content>
           <hr
             style={{
-              marginBottom: rhythm(1)
+              marginBottom: rhythm(2)
             }}
           />
           <Bio />
