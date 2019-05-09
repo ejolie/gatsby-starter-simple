@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Column, Columns, Title, Subtitle } from "bloomer";
+import { Container, Column, Columns, Title, Subtitle, Button } from "bloomer";
 import styled, { keyframes } from "styled-components";
 
 import Layout from "../components/Layout";
@@ -42,9 +42,14 @@ const About = (props) => {
               </span>
               <br /> I love to make things with JavaScript.
             </Subtitle>
-            <span>
-              <a href="https://github.com/ejolie/">Github</a>
-            </span>
+            <Button
+              isSize="small"
+              isColor="primary"
+              isOutlined
+              href="https://github.com/ejolie/"
+            >
+              Github
+            </Button>
           </Column>
         </Columns>
       </Container>

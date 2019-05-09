@@ -11,7 +11,7 @@ const TagsList = ({ tags }) => {
   return (
     <>
       <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-        <span style={{ fontSize: "1.2rem" }}>🔖</span>
+        <span style={{ fontSize: "1rem" }}>🔖</span>
         {tags.map((tag) => (
           <TagBox key={tag}>
             <Link style={{ boxShadow: "none" }} to={`/tags/${kebabCase(tag)}/`}>
@@ -41,9 +41,18 @@ const TagBox = styled.div`
   font-size: 0.6rem;
   text-transform: uppercase;
   background-color: #fff;
+  color: #7a7a7a;
 
   a {
     box-shadow: none;
+    color: hsl(0, 0%, 48%);
+  }
+
+  :link {
+    color: hsl(0, 0%, 48%);
+  }
+
+  :visited {
     color: hsl(0, 0%, 48%);
   }
 

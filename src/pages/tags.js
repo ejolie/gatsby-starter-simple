@@ -59,14 +59,23 @@ const TagBox = styled.div`
   display: inline-block;
   background-color: #fff;
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 0.3rem;
   padding: 0.2rem 0.7rem;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  color: #7a7a7a;
 
   a {
     box-shadow: none;
     font-size: 0.8rem;
+    color: hsl(0, 0%, 48%);
+  }
+
+  :link {
+    color: hsl(0, 0%, 48%);
+  }
+
+  :visited {
     color: hsl(0, 0%, 48%);
   }
 

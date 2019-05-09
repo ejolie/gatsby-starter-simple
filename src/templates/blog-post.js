@@ -40,10 +40,12 @@ class BlogPostTemplate extends React.Component {
               <StyledTitle isSize={2}>{post.frontmatter.title}</StyledTitle>
               <p
                 style={{
-                  fontSize: "0.9rem",
-                  marginTop: "1.5rem",
+                  fontFamily: "Nunito, Noto Sans KR",
+                  fontSize: "0.8rem",
+                  fontWeight: "300",
+                  marginTop: "1.3rem",
                   marginRight: "0.3rem",
-                  marginBottom: "0.3rem",
+                  marginBottom: "0.1rem",
                   display: "block"
                 }}
                 className="has-text-grey"
@@ -105,12 +107,6 @@ const StyledTitle = styled(Title)`
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 60%,
-      hsla(171, 94%, 61%, 0.5) 50% );
-  );
-  display: inline;
 `;
 
 export default BlogPostTemplate;

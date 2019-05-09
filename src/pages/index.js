@@ -12,7 +12,7 @@ import {
 import "bulma/css/bulma.css";
 import styled from "styled-components";
 
-// import "../utils/prism-duotone-dark.css";
+import "../utils/prism-duotone-light.css";
 import "../utils/global.css";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -39,9 +39,13 @@ class BlogIndex extends React.Component {
                     <MediaContent>
                       <Link
                         style={{
+                          color: "hsl(0, 0 %, 29 %)",
                           boxShadow: "none",
                           ":hover": {
                             color: "hsl(0, 0%, 21%)"
+                          },
+                          ":link": {
+                            color: "hsl(0, 0%, 29%)"
                           }
                         }}
                         to={node.fields.slug}
