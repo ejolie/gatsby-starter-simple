@@ -6,6 +6,7 @@ import { DiscussionEmbed } from "disqus-react";
 import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+// import TagList from "../TagList";
 import { rhythm, scale } from "../utils/typography";
 
 class BlogPostTemplate extends React.Component {
@@ -56,6 +57,7 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.date}
             </p>
+            {/* <TagList tags={post.frontmatter.tags} /> */}
           </Section>
           <Content>
             <div
@@ -127,6 +129,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
