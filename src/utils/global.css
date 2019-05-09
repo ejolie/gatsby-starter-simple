@@ -8,7 +8,7 @@ a {
 }
 
 a:hover {
-  color: hsl(171, 100%, 41%);
+  color: hsl(0, 0%, 29%);
 }
 
 .tag:not(body) {

@@ -15,18 +15,19 @@ const Nav = (props) => {
   const { title, onClickNav, isActive } = props;
   return (
     <HeroHeader>
-      <Navbar>
+      <Navbar style={{ backgroundColor: "#f5f5f5" }}>
         <Container>
           <NavbarBrand>
-            <NavbarItem className="has-text-grey" style={{ marginRight: 5 }}>
+            <NavbarItem style={{ marginRight: 5, marginLeft: 5 }}>
               <Link
                 to="/"
                 style={{ boxShadow: "none", color: "hsl(0, 0%, 29%)" }}
               >
                 <h2
+                  className="has-text-dark"
                   style={{
                     fontFamily: "Nunito",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     fontSize: "1rem"
                   }}
                 >
@@ -38,12 +39,14 @@ const Nav = (props) => {
               isDisplay="mobile"
               isActive={isActive}
               onClick={onClickNav}
+              style={{ backgroundColor: "#f5f5f5" }}
             />
           </NavbarBrand>
           <NavbarMenu
             isDisplay={["desktop", "widescreen"]}
             isActive={isActive}
             onClick={onClickNav}
+            style={{ backgroundColor: "#f5f5f5" }}
           >
             <NavbarEnd>
               <NavbarItem

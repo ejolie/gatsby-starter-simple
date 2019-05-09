@@ -28,47 +28,51 @@ class BlogIndex extends React.Component {
               <StyledColumn isSize="3/4">
                 <Media style={{ padding: "1.5rem" }}>
                   <MediaContent>
-                    <Content>
-                      <Title
-                        style={{
-                          marginBottom: "0.5rem"
-                        }}
-                        isSize={4}
-                      >
-                        <Link
+                    <Link
+                      style={{
+                        boxShadow: "none",
+                        ":hover": {
+                          color: "hsl(0, 0%, 21%)"
+                        }
+                      }}
+                      to={node.fields.slug}
+                    >
+                      <Content>
+                        <Title
                           style={{
-                            boxShadow: "none",
+                            marginBottom: "0.5rem",
                             color: "hsl(0, 0%, 21%)",
                             fontFamily: "Nunito, Noto Sans KR",
                             fontWeight: "400"
                           }}
-                          to={node.fields.slug}
+                          isSize={4}
+                          id="post-title"
                         >
                           {title}
-                        </Link>
-                      </Title>
-                      <small
-                        className="has-text-grey"
-                        style={{
-                          fontFamily: "Nunito, Noto Sans KR",
-                          fontWeight: "400"
-                        }}
-                      >
-                        {node.frontmatter.date}
-                      </small>
-                      <p
-                        hasTextColor="dark"
-                        style={{
-                          fontFamily: "Nunito, Noto Sans KR",
-                          fontWeight: "400",
-                          fontSize: "1.2rem",
-                          marginTop: "0.7rem"
-                        }}
-                        dangerouslySetInnerHTML={{
-                          __html: node.frontmatter.description || node.excerpt
-                        }}
-                      />
-                    </Content>
+                        </Title>
+                        <small
+                          className="has-text-grey"
+                          style={{
+                            fontFamily: "Nunito, Noto Sans KR",
+                            fontWeight: "400"
+                          }}
+                        >
+                          {node.frontmatter.date}
+                        </small>
+                        <p
+                          hasTextColor="dark"
+                          style={{
+                            fontFamily: "Nunito, Noto Sans KR",
+                            fontWeight: "400",
+                            fontSize: "1.2rem",
+                            marginTop: "0.7rem"
+                          }}
+                          dangerouslySetInnerHTML={{
+                            __html: node.frontmatter.description || node.excerpt
+                          }}
+                        />
+                      </Content>
+                    </Link>
                   </MediaContent>
                 </Media>
               </StyledColumn>
@@ -81,6 +85,7 @@ class BlogIndex extends React.Component {
 }
 
 const StyledColumn = styled(Column)`
+  cursor: pointer;
   background-color: #fff;
   border-radius: 10px;
   margin-right: 2rem;
@@ -95,6 +100,10 @@ const StyledColumn = styled(Column)`
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.16);
     transform: translate(0, -10px);
     transition-delay: 0s !important;
+
+    #post-title {
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
   }
 `;
 

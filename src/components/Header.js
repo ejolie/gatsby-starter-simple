@@ -8,6 +8,7 @@ import {
   Title,
   Subtitle
 } from "bloomer";
+import styled, { keyframes } from "styled-components";
 
 import Nav from "./Nav";
 
@@ -44,9 +45,9 @@ const Header = (props) => {
                 style={{ fontFamily: "Nunito, Noto Sans KR", fontWeight: 300 }}
               >
                 I think, write, and code.{" "}
-                <span role="img" aria-label="Rocket">
-                  🚀
-                </span>
+                <Heart role="img" aria-label="ㅗㄷㅁㄱㅅ">
+                  💓
+                </Heart>
               </Subtitle>
             </Column>
           </Columns>
@@ -55,5 +56,24 @@ const Header = (props) => {
     </Hero>
   );
 };
+
+const jump = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+`;
+
+const Heart = styled.span`
+  display: inline-block;
+  animation: ${jump} 0.4s ease infinite alternate;
+  animation-play-state: paused;
+
+  :hover {
+    animation-play-state: running;
+  }
+`;
 
 export default Header;

@@ -7,7 +7,7 @@ import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import TagsList from "../components/TagsList";
-import { rhythm, scale } from "../utils/typography";
+import { rhythm } from "../utils/typography";
 
 class BlogPostTemplate extends React.Component {
   render() {

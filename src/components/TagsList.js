@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+import { kebabCase } from "lodash";
 import styled from "styled-components";
 
 const TagsList = ({ tags }) => {
@@ -6,39 +8,54 @@ const TagsList = ({ tags }) => {
     return null;
   }
 
+  console.log(tags);
+
   return (
-    <Ul>
-      {tags.map((tag) => (
-        <Li key={tag}>{tag}</Li>
-      ))}
-    </Ul>
+    <>
+      <TagBox>
+        <span style={{ fontSize: "1.2rem" }}>🔖</span>
+        {tags.map((tag) => (
+          <TagItem key={tag}>
+            <Link style={{ boxShadow: "none" }} to={`/tags/${kebabCase(tag)}/`}>
+              {tag}
+            </Link>
+          </TagItem>
+        ))}
+      </TagBox>
+    </>
   );
 };
 
 export default TagsList;
 
-const Ul = styled.ul`
-  display: inline-block;
-  list-style: none;
-  margin: 0;
+const TagBox = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
   padding: 0;
 `;
 
-const Li = styled.li`
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  border: 0;
-  float: left;
-
-  font-family: "Nunito, Noto Sans KR", sans-serif;
-  font-size: 0.5rem;
-  color: hsl(0, 0%, 48%);
+const TagItem = styled.span`
+  margin: 0 0.2rem 0 0.2rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.6rem;
   text-transform: uppercase;
-  display: inline-block;
   background-color: #fff;
 
-  border-radius: 10px;
-  margin: 0.3rem;
-  padding: 0.2rem 0.5rem;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  a {
+    box-shadow: none;
+    color: hsl(0, 0%, 48%);
+  }
+
+  :hover {
+    transition-delay: 0s !important;
+    border: 1px solid hsl(171, 100%, 41%);
+
+    a {
+      color: hsl(171, 100%, 41%);
+    }
+  }
 `;

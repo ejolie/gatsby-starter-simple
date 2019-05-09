@@ -8,7 +8,7 @@ import Layout from "../components/Layout";
 
 const TagsPage = (props) => {
   const { data } = props;
-  const allTags = data.allMarkdownRemark.group;
+  const tags = data.allMarkdownRemark.group;
   const siteTitle = data.site.siteMetadata.title;
 
   return (
@@ -30,13 +30,13 @@ const TagsPage = (props) => {
             marginBottom: "1.7rem"
           }}
         >
-          <span img="role" aria-label="Tag">
+          <span role="img" aria-label="Tag">
             🔖
           </span>{" "}
           Tags
         </Title>
         <ul>
-          {allTags.map((tag) => (
+          {tags.map((tag) => (
             <TagBox key={tag.fieldValue}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
@@ -63,9 +63,10 @@ const TagBox = styled.div`
   a {
     box-shadow: none;
     font-size: 0.8rem;
+    color: hsl(0, 0%, 48%);
   }
 
-  &:hover {
+  :hover {
     transition-delay: 0s !important;
     border: 1px solid hsl(171, 100%, 41%);
 

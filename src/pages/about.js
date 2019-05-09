@@ -1,5 +1,6 @@
 import React from "react";
 import { Title, Section, Subtitle } from "bloomer";
+import styled, { keyframes } from "styled-components";
 
 import Layout from "../components/Layout";
 
@@ -26,29 +27,46 @@ const About = (props) => {
             marginBottom: "1.7rem"
           }}
         >
-          <span role="img" aria-label="Shaking hand">
+          <Hand role="img" aria-label="Shaking hand">
             👋🏻
-          </span>{" "}
+          </Hand>{" "}
           Hello, I'm Eunjeong. <br />
         </Title>
         <Subtitle isSize={3} style={{ marginTop: "1rem" }}>
-          I'm Front-end Developer based in{" "}
+          I'm Front-end Developer based in Seoul.{" "}
           <span role="img" aria-label="South Korea">
             🇰🇷
-          </span>{" "}
-          Seoul.
+          </span>
           <br /> I love to make things with JavaScript.
         </Subtitle>
         <span>
-          <a>Portfolio</a>
-        </span>{" "}
-        <span>
-          <a>Github</a>
+          <a href="https://github.com/ejolie/">Github</a>
         </span>
       </Section>
     </Layout>
   );
 };
+
+const shake = keyframes`
+  10% {
+    transform: rotate(-20deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  30%, 100% {
+    transform: rotate(0deg);
+  }
+`;
+
+const Hand = styled.span`
+  display: inline-block;
+  animation: ${shake} 2s 1.5;
+  transform-origin: right bottom;
+  animation-play-state: running;
+`;
 
 export default About;
 

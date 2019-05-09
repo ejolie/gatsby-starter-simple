@@ -1,7 +1,7 @@
 ---
 title: 한글 포스트
 date: "2019-05-03T22:40:32.169Z"
-tags: ["korean", "helloworld"]
+tags: ["korean", "helloworld", "react", "javascript"]
 description: 이것은 한글 포스트입니다.
 ---
 

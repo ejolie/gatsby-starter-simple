@@ -45,7 +45,11 @@ const Tags = ({ pageContext, data, location }) => {
               return (
                 <li key={slug}>
                   <Link
-                    style={{ fontSize: "1.3rem", marginRight: "0.5rem" }}
+                    style={{
+                      fontSize: "1.3rem",
+                      marginRight: "0.5rem",
+                      lineHeight: "1.7"
+                    }}
                     to={slug}
                   >
                     {title}
@@ -91,7 +95,7 @@ const TagHighlight = styled.span`
   position: relative;
   text-decoration: none;
 
-  ::before {
+  :before {
     content: "";
     position: absolute;
     left: -5px;
