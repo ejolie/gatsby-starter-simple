@@ -9,6 +9,7 @@ A Gatsby starter template based on [gatsby-starter-blog](https://github.com/gats
 ## ✨ Features
 
 - [Bulma CSS framework](https://github.com/jgthms/bulma) with its [Bloomer react components](https://github.com/AlgusDark/bloomer)
+- Tagging
 - Disqus
 
 &nbsp;
