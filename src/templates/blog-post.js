@@ -37,16 +37,25 @@ class BlogPostTemplate extends React.Component {
           />
           <Section style={{ paddingLeft: 0, paddingRight: 0, paddingTop: 0 }}>
             <Content isSize="medium">
-              <StyledTitle isSize={2}>{post.frontmatter.title}</StyledTitle>
+              <Title
+                style={{
+                  fontFamily: "Nunito, Noto Sans KR",
+                  fontSize: "2.5rem",
+                  fontWeight: 600,
+                  marginBottom: "0.5rem"
+                }}
+              >
+                {post.frontmatter.title}
+              </Title>
               <p
                 style={{
                   fontFamily: "Nunito, Noto Sans KR",
                   fontSize: "0.8rem",
                   fontWeight: "300",
-                  marginTop: "1.3rem",
+                  marginTop: "1rem",
                   marginRight: "0.3rem",
                   marginBottom: "0.1rem",
-                  marginLeft: "0.2rem",
+                  marginLeft: "0.1rem",
                   display: "block"
                 }}
                 className="has-text-grey"
@@ -102,13 +111,6 @@ class BlogPostTemplate extends React.Component {
     );
   }
 }
-
-const StyledTitle = styled(Title)`
-  font-family: "Nunito, Noto Sans KR", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-`;
 
 export default BlogPostTemplate;
 

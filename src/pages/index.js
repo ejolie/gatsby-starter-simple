@@ -68,17 +68,17 @@ class BlogIndex extends React.Component {
                             style={{
                               fontFamily: "Nunito, Noto Sans KR",
                               fontWeight: "300",
-                              fontSize: "0.8rem"
+                              fontSize: "0.9rem"
                             }}
                           >
                             {node.frontmatter.date}
                           </small>
                           <p
-                            className="has-text-dark"
+                            className="has-text-grey"
                             style={{
                               fontFamily: "Nunito, Noto Sans KR",
                               fontWeight: "400",
-                              fontSize: "1.2rem",
+                              fontSize: "1.1rem",
                               marginTop: "0.7rem"
                             }}
                             dangerouslySetInnerHTML={{
