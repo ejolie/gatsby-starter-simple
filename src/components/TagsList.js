@@ -11,7 +11,6 @@ const TagsList = ({ tags }) => {
   return (
     <>
       <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-        <span style={{ fontSize: "1rem" }}>🔖</span>
         {tags.map((tag) => (
           <TagBox key={tag}>
             <Link style={{ boxShadow: "none" }} to={`/tags/${kebabCase(tag)}/`}>

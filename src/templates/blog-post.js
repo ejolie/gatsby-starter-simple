@@ -46,6 +46,7 @@ class BlogPostTemplate extends React.Component {
                   marginTop: "1.3rem",
                   marginRight: "0.3rem",
                   marginBottom: "0.1rem",
+                  marginLeft: "0.2rem",
                   display: "block"
                 }}
                 className="has-text-grey"

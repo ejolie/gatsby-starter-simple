@@ -74,7 +74,7 @@ class BlogIndex extends React.Component {
                             {node.frontmatter.date}
                           </small>
                           <p
-                            hasTextColor="dark"
+                            className="has-text-dark"
                             style={{
                               fontFamily: "Nunito, Noto Sans KR",
                               fontWeight: "400",
@@ -107,9 +107,13 @@ const StyledColumn = styled(Column)`
   margin-right: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+  -o-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
   -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
   -moz-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  -o-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
   transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
 
   :hover {

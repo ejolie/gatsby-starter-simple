@@ -29,12 +29,10 @@ const TagsPage = (props) => {
               style={{
                 fontFamily: "Nunito, Noto Sans KR",
                 fontWeight: 400,
-                marginBottom: "1.7rem"
+                marginBottom: "1.7rem",
+                marginLeft: "0.3rem"
               }}
             >
-              <span role="img" aria-label="Tag">
-                🔖
-              </span>{" "}
               Tags
             </Title>
             <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
