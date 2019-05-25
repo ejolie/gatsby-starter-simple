@@ -23,13 +23,6 @@ const TagsList = ({ tags }) => {
   );
 };
 
-export default TagsList;
-
-// const TagBox = styled.div`
-//   display: inline-block;
-//   padding: 0;
-// `;
-
 const TagBox = styled.div`
   display: inline-block;
   margin: 0 0.4rem 0.1rem 0rem;
@@ -64,3 +57,5 @@ const TagBox = styled.div`
     }
   }
 `;
+
+export default TagsList;
